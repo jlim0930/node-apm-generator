@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web-app:
+    build: ./web-app
+    environment:
+      - ELASTIC_APM_SERVER_URL=${ELASTIC_APM_SERVER_URL}
+      - ELASTIC_APM_SECRET_TOKEN=${ELASTIC_APM_SECRET_TOKEN}
+      - ELASTIC_APM_VERIFY_SERVER_CERT=${ELASTIC_APM_VERIFY_SERVER_CERT}
+    ports:
+      - "3000:3000"
+
+  client:
+    build: ./client
+    environment:
+      - ELASTIC_APM_SERVER_URL=${ELASTIC_APM_SERVER_URL}
+      - ELASTIC_APM_SECRET_TOKEN=${ELASTIC_APM_SECRET_TOKEN}
+      - ELASTIC_APM_VERIFY_SERVER_CERT=${ELASTIC_APM_VERIFY_SERVER_CERT}
+      - SERVER_URL=http://web-app:3000/data
+    depends_on:
+      - web-app

@@ -1,0 +1,11 @@
+{
+    "name": "web-app",
+    "version": "1.0.0",
+    "description": "Node.js Web Application with Elastic APM",
+    "main": "app.js",
+    "dependencies": {
+      "express": "^4.19.2",
+      "elastic-apm-node": "^4.7.1"
+    }
+  }
+  
