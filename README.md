@@ -10,6 +10,8 @@ edit `.env` and specify:
 - `serviceToken` - https://www.elastic.co/guide/en/observability/current/apm-secret-token.html#apm-configure-secret-token
 
 ### Run
-- initial run `docker-compose up --build`
+- initial run `docker-compose up --build` or whenever you update any files run with `--build`
 - if no changes were made and you need to restart you can `docker-compose up`
+- you can add the `-d` option to run it in detached mode
+  - to clean up and shutdown `docker-compose down`
 
