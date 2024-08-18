@@ -4,8 +4,9 @@
     "description": "Client generating continuous HTTP requests",
     "main": "client.js",
     "dependencies": {
+      "@elastic/ecs-winston-format": "^1.5.3",
+      "winston": "^3.13.1",
       "axios": "^1.7.2",
       "elastic-apm-node": "^4.7.1"
     }
   }
-  
