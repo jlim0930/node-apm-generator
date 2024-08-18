@@ -5,10 +5,9 @@
 
 ### Configure
 
-- clone this repo `git clone https://github.com/jlim0930/node-apm-generator.git`
-- edit `.env` and specify:
-  - APM server hostname - please ensure to add the port to the URL even if you are just using the default https port ie `https://apm.example.com:443`
-  - `serviceToken` - https://www.elastic.co/guide/en/observability/current/apm-secret-token.html#apm-configure-secret-token
+edit `.env` and specify:
+- APM server hostname - please ensure to add the port to the URL even if you are just using the default https port ie `https://apm.example.com:443`
+- `serviceToken` - https://www.elastic.co/guide/en/observability/current/apm-secret-token.html#apm-configure-secret-token
 
 ### Run
 - initial run `docker-compose up --build`
