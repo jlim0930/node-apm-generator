@@ -6,8 +6,9 @@
 ### Configure
 
 edit `.env` and specify:
-- APM server hostname - please ensure to add the port to the URL even if you are just using the default https port ie `https://apm.example.com:443`
-- `serviceToken` - https://www.elastic.co/guide/en/observability/current/apm-secret-token.html#apm-configure-secret-token
+- `ELASTIC_APM_SERVER_URL` - URL for your APM instance, can be APM server or elastic-agent running APM integration or Integration server - please ensure to add :443 at the end if you are running just normal `https`
+- `ELASTIC_APM_SECRET_TOKEN` - `secretToken` to ingest data into APM - https://www.elastic.co/guide/en/observability/current/apm-secret-token.html#apm-configure-secret-token
+- `ELASTIC_APM_VERIFY_SERVER_CERT` - disable SSL validation
 
 ### Run
 - initial run `docker-compose up --build` or whenever you update any files run with `--build`
