@@ -11,8 +11,8 @@ edit `.env` and specify:
 - `ELASTIC_APM_VERIFY_SERVER_CERT` - disable SSL validation
 
 ### Run
-- initial run `docker-compose up --build` or whenever you update any files run with `--build`
-- if no changes were made and you need to restart you can `docker-compose up`
+- initial run `docker compose up --build` or whenever you update any files run with `--build`
+- if no changes were made and you need to restart you can `docker compose up`
 - you can add the `-d` option to run it in detached mode
-  - to clean up and shutdown `docker-compose down`
+  - to clean up and shutdown `docker compose down`
 
